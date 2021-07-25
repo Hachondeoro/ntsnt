@@ -22,6 +22,9 @@ import {
 import ReactMarkdown from "react-markdown";
 import ImageGallery from "react-image-gallery";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import { FadeInRegular } from "@components/gsapComponents";
+
+
 
 const MYQUERY = `query MyQuery {
   allProjects {
@@ -115,9 +118,11 @@ const Projects = ({ data }) => {
         <section className="container-fluid black">
           <div className="row m-10-hor">
             <div className="col-md-5">
-              <div className="heading">
-                Perfection in<span className="br"></span> Design
-              </div>
+              <FadeInRegular>
+                <div className="heading">
+                  Perfection in<span className="br"></span> Design
+                </div>
+              </FadeInRegular>
             </div>
 
             <div className="col-md-7">
@@ -165,7 +170,6 @@ const Projects = ({ data }) => {
                 </Modal>
               </div>
               <div>
-                {console.log(data)}
                 <section className="container-fluid black_more">
                   <div className="projectCards">
                     <Row>
