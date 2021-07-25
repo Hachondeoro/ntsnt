@@ -11,8 +11,8 @@ const Layout = ({ pageTitle, pageDescription, keyWords, children }) => {
         <meta charSet="UTF-8"/>
         <title>{pageTitle}</title>
         <meta name="google-site-verification" content="Q1VbG70vk5QDujpOCiy41GLO32duGdDJ9BVYXzmKOGs" />
-        <meta property="og:image" content="https://ntmomineen.com.au/webPreviewNTMomineen.jpg"/>
-				<link property="image" href="https://ntmomineen.com.au/webPreviewNTMomineen.jpg" />
+        <meta property="og:image" content="https://ntsnt.vercel.app/webNTSNTpreview.jpg"/>
+				<link property="image" href="https://ntsnt.vercel.app/webNTSNTpreview.jpg" />
         <meta name="description" content={pageDescription} />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={pageDescription} />

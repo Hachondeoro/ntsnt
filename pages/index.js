@@ -13,9 +13,9 @@ const Home = () => {
   return (
     <Layout
       pageTitle="Northern Trade Solutions"
-      pageDescription="Northern Trade Solutions (NTS) has been providing the Northern
-                Territory building industry with a comprehensive range of
-                building and fit out services since 2010. "
+      pageDescription="Northern Trade Solutions (NTS) is a well-recognised provider of
+                full project solutions, fit out solutions and building and
+                construction services in the Northern Territory."
       keyWords="nt building construction"
     >
       <div>
