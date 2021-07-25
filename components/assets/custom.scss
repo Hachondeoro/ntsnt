@@ -1,0 +1,88 @@
+.try {
+  color: #565555;
+}
+
+
+.projectCards {
+  color: #000;
+  h5 {
+    font-size: 1em;
+  }
+  p {
+    color: #000;
+  }
+}
+.parentCard {
+  color: #000;
+  p, h5{
+    white-space: pre-wrap;
+  }
+}
+.btn-primary {
+  background: rgb(255, 255, 255);
+  color: rgb(99, 99, 99);
+  border: 2px solid rgb(83, 154, 182);
+  border-radius: 3px;
+  padding: 5px 10px;
+  text-transform: uppercase;
+
+  &:hover, &:focus{
+      border-color: #285e8e !important;
+      background: rgb(83, 154, 182) !important;
+      z-index: 1;
+      color: #ffffff !important;
+  }
+
+}
+
+.custom-button{
+    @extend .btn-primary;
+    font-size: 2em;
+    margin-left: auto;
+    margin-right:20px;
+}
+.reactTabs{
+    text-align: center;
+    .tab{
+        font-size: 2em;
+    }
+}
+
+.employment{
+    background: #fff;
+    color: #919191;
+}
+
+.markdown {
+  font-size: 14px;
+  color: #919191;
+  white-space: pre;
+
+  h1 {
+    font-size: 32px;
+    margin-bottom: 16px;
+    text-align: left;
+    color: rgb(99, 99, 99);
+    font-variant-caps: all-small-caps;
+  }
+  h2 {
+    font-size: 32px;
+    margin-bottom: 16px;
+    text-align: left;
+    color: #ccc;
+  }
+  p {
+    font-size: 14px;
+    color: #6f6f6f;
+    text-align: left;
+    // white-space: pre-wrap;
+  }
+  h3 {
+    font-size: 18px;
+  }
+  ul li {
+    margin-left: 3em;
+    text-align: left;
+    color: #6f6f6f;
+  }
+}
