@@ -22,7 +22,7 @@ export const FadeInRight = ({ children }) => (
 );
 
 export const FadeInRegular = ({ children }) => (
-  <ScrollTrigger start="-250px center" end="200px center" scrub={0.5}>
+  <ScrollTrigger start="-250px center" end="+=150" scrub={0.5}>
     <Tween from={{ opacity: 0 }} duration={2}>
       {children}
     </Tween>

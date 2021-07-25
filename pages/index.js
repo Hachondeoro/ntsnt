@@ -7,7 +7,7 @@ import Footer from "@components/footer";
 import Slider from "@components/sliderhome";
 import Layout from "@components/layout";
 import { Button } from "reactstrap";
-import { FadeInLeft, FadeInRight } from "@components/gsapComponents";
+import { FadeInLeft, FadeInRight, FadeInRegular } from "@components/gsapComponents";
 
 const Home = () => {
   return (
@@ -18,7 +18,7 @@ const Home = () => {
                 construction services in the Northern Territory."
       keyWords="nt building construction"
     >
-      <div>
+      <div className="wraperitem">
         <section className="jumbotron jumbomain">
           <Slider />
           <div className="icon-scroll-wraper">
@@ -61,9 +61,9 @@ const Home = () => {
 
             <div className="col-md-6 centered p-5">
               <div className="p-md-5">
-                <FadeInRight>
+                <FadeInRegular>
                   <div className="heading">PARTITIONS & CEILINGS</div>
-                </FadeInRight>
+                </FadeInRegular>
                 <p className="mt-3">
                   NTS provide specialised partitions and ceiling services. This
                   includes the installation of fire-rated partitions and
@@ -81,9 +81,9 @@ const Home = () => {
 
             <div className="col-md-6 centered p-5 pb-5">
               <div className="p-md-5">
-                <FadeInLeft>
-                <div className="heading">METAL FABRICATION</div>
-                </FadeInLeft>
+                <FadeInRegular>
+                  <div className="heading">METAL FABRICATION</div>
+                </FadeInRegular>
                 <p className="mt-3">
                   NTS offer a full range of metal building components, including
                   sun-hood screens, window awnings, balustrade and handrails,
@@ -105,9 +105,9 @@ const Home = () => {
 
             <div className="col-md-6 centered p-5">
               <div className="p-md-5">
-                <FadeInRight>
-                <div className="heading">CARPENTRY & JOINERY</div>
-                </FadeInRight>
+                <FadeInRegular>
+                  <div className="heading">CARPENTRY & JOINERY</div>
+                </FadeInRegular>
                 <p className="mt-3">
                   NTS are proud of our carpentry and joinery services and our
                   attention to detail and finish in these areas. The services we
