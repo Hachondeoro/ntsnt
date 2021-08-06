@@ -1,24 +1,32 @@
-import React from "react";
+import {
+  FadeInImage, FadeInRegular
+} from "@components/gsap/gsapComponents";
 import Link from "next/link";
+import React from "react";
 
 const BannerContact = () => (
   <>
     <section className="container-fluid p-md-0 pt-1">
       <div className="row">
         <div className="col-md-6">
-          <img
-            src="./images/bannerInterior2.jpg"
-            alt="imgbanner"
-            className="w-100 border-radius"
-          />
+          <FadeInImage>
+            <img
+              src="./images/bannerInterior2.jpg"
+              alt="imgbanner"
+              className="w-100 border-radius"
+            />
+          </FadeInImage>
         </div>
         <div className="col-md-6 centered">
           <div>
-            <div className="subheading mt-md-0 mt-5">You can trust us</div>
-            <div className="heading">
-              No brilliant design is too difficult as we can always turn it into
-              reality.
-            </div>
+            <FadeInRegular>
+              <div
+                className="heading"
+                style={{ fontVariant: "all-small-caps" }}
+              >
+                No brilliant design is too difficult for us
+              </div>
+            </FadeInRegular>
             <p>
               Over the years we have developed strong working relationships with
               a number of principal contractors and specialised sub-contractors

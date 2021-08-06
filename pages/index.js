@@ -1,13 +1,15 @@
-import React from "react";
-import Link from "next/link";
 // import Carouselteam from "@components/carouselteam";
 import Bannercontact from "@components/bannercontact";
 import Testimony from "@components/carouseltestimony";
 import Footer from "@components/footer";
-import Slider from "@components/sliderhome";
+import {
+  FadeInImage, FadeInLeft, FadeInRegular
+} from "@components/gsap/gsapComponents";
 import Layout from "@components/layout";
+import Slider from "@components/sliderhome";
+import Link from "next/link";
+import React from "react";
 import { Button } from "reactstrap";
-import { FadeInLeft, FadeInRight, FadeInRegular } from "@components/gsapComponents";
 
 const Home = () => {
   return (
@@ -56,7 +58,13 @@ const Home = () => {
         <section className="container-fluid p-md-0">
           <div className="row">
             <div className="col-md-6 pr-md-0">
-              <img src="/images/partition-ceilings.png" width="100%" alt="#" />
+              <FadeInImage>
+                <img
+                  src="/images/partition-ceilings.png"
+                  width="100%"
+                  alt="#"
+                />
+              </FadeInImage>
             </div>
 
             <div className="col-md-6 centered p-5">
@@ -93,14 +101,18 @@ const Home = () => {
             </div>
 
             <div className="col-md-6 pl-md-0">
-              <img src="/images/metal-fabrication.png" width="100%" alt="#" />
+              <FadeInImage>
+                <img src="/images/metal-fabrication.png" width="100%" alt="#" />
+              </FadeInImage>
             </div>
             <hr
               className="w-100 my-0"
               style={{ backgroundColor: "#fff", height: 10 }}
             />
             <div className="col-md-6 pr-md-0">
-              <img src="/images/carpentry.png" width="100%" alt="#" />
+              <FadeInImage>
+                <img src="/images/carpentry.png" width="100%" alt="#" />
+              </FadeInImage>
             </div>
 
             <div className="col-md-6 centered p-5">

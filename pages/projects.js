@@ -1,33 +1,28 @@
-import React, { useState } from "react";
-import Link from "next/link";
-import Footer from "@components/footer";
-import Layout from "@components/layout";
 import { request } from "@components/DatoCMS/datocms";
+import Footer from "@components/footer";
+import { FadeInImage, FadeInRegular } from "@components/gsap/gsapComponents";
+import Layout from "@components/layout";
+import Link from "next/link";
+import React, { useState } from "react";
+import ImageGallery from "react-image-gallery";
+import ReactMarkdown from "react-markdown";
+import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import {
-  Card,
-  CardImg,
-  CardText,
-  CardBody,
-  CardTitle,
-  CardSubtitle,
   Button,
+  Card,
+  CardBody,
+  CardImg,
+  CardTitle,
+  Col,
   Modal,
-  ModalHeader,
   ModalBody,
   ModalFooter,
-  Col,
-  Row,
+  ModalHeader,
+  Row
 } from "reactstrap";
 
-import ReactMarkdown from "react-markdown";
-import ImageGallery from "react-image-gallery";
-import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-import { FadeInRegular } from "@components/gsapComponents";
-
-
-
 const MYQUERY = `query MyQuery {
-  allProjects {
+  allProjects (first:40){
     title
     image {
       url
@@ -35,7 +30,7 @@ const MYQUERY = `query MyQuery {
     shortDescription
     projectDetails(markdown: false)
   }
-  allProjectCommercials {
+  allProjectCommercials (first:40){
     title
     image {
       url
@@ -175,25 +170,34 @@ const Projects = ({ data }) => {
                     <Row>
                       {data.allProjects.map((item, index) => (
                         <Col className="ml-auto mr-auto text-center" md="3">
-                          <Card>
-                            <CardImg
-                              top
-                              width="100%"
-                              src={item.image[0].url}
-                              alt="Card image cap"
-                            />
-                            <CardBody>
-                              <CardTitle tag="h5" className="mb-2 text-muted">
-                                {item.title}
-                              </CardTitle>
-                              <Button
-                                color="primary"
-                                onClick={() => toggleResidential(index)}
-                              >
-                                View More
-                              </Button>
-                            </CardBody>
-                          </Card>
+                          <FadeInImage>
+                            <div>
+                              <Card className="h-100">
+                                <CardImg
+                                  top
+                                  width="100%"
+                                  height="200px"
+                                  src={item.image[0].url}
+                                  alt="Card image cap"
+                                />
+
+                                <CardBody>
+                                  <CardTitle
+                                    tag="h5"
+                                    className="mb-2 text-muted"
+                                  >
+                                    {item.title}
+                                  </CardTitle>
+                                  <Button
+                                    color="primary"
+                                    onClick={() => toggleResidential(index)}
+                                  >
+                                    View More
+                                  </Button>
+                                </CardBody>
+                              </Card>
+                            </div>
+                          </FadeInImage>
                         </Col>
                       ))}
                     </Row>
@@ -236,25 +240,33 @@ const Projects = ({ data }) => {
                     <Row>
                       {data.allProjectCommercials.map((item, index) => (
                         <Col className="ml-auto mr-auto text-center" md="3">
-                          <Card>
-                            <CardImg
-                              top
-                              width="100%"
-                              src={item.image[0].url}
-                              alt="Card image cap"
-                            />
-                            <CardBody>
-                              <CardTitle tag="h5" className="mb-2 text-muted">
-                                {item.title}
-                              </CardTitle>
-                              <Button
-                                color="primary"
-                                onClick={() => toggleCommercial(index)}
-                              >
-                                View More
-                              </Button>
-                            </CardBody>
-                          </Card>
+                          <FadeInImage>
+                            <div>
+                              <Card className="h-100">
+                                <CardImg
+                                  top
+                                  width="100%"
+                                  height="200px"
+                                  src={item.image[0].url}
+                                  alt="Card image cap"
+                                />
+                                <CardBody>
+                                  <CardTitle
+                                    tag="h5"
+                                    className="mb-2 text-muted"
+                                  >
+                                    {item.title}
+                                  </CardTitle>
+                                  <Button
+                                    color="primary"
+                                    onClick={() => toggleCommercial(index)}
+                                  >
+                                    View More
+                                  </Button>
+                                </CardBody>
+                              </Card>
+                            </div>
+                          </FadeInImage>
                         </Col>
                       ))}
                     </Row>
