@@ -38,8 +38,8 @@ const About = () => (
           </div>
         </div>
       </section>
-      <section>
-        <img src="/images/aboutus.jpg" width="100%" />
+      <section className="col-12 col-md-9 mx-auto d-block">
+        <img src="/images/aboutus.jpg" width="100%"/>
       </section>
       <section className="container-fluid black_more">
         <div className="row m-10-hor">

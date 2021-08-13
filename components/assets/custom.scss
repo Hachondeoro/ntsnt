@@ -2,6 +2,50 @@
   color: #565555;
 }
 
+.backgroundHome {
+  background-color: rgb(0, 88, 124);
+}
+
+.special-card {
+  opacity: 1;
+  position: fixed;
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  bottom: 0;
+  .special-button {
+    border: 0px;
+  }
+  .heading-card {
+    background-color: rgba(0, 0, 0, 0.265);
+    color: #fff;
+    position: relative;
+  }
+}
+
+.awards {
+  background-color: #ffffff;
+  img {
+    margin: auto;
+  }
+  h1 {
+    font-variant: all-small-caps;
+    text-align: center;
+    font-weight: 750;
+    color: rgb(0, 88, 124);
+  }
+  .individual {
+    img {
+      // height: 300px;
+      width:100%;
+      padding: 20px;
+      border-radius: 20%/25%;
+    }
+  }
+  .arrowBack:hover{
+    cursor:pointer;
+  }
+}
 
 .projectCards {
   color: #000;
@@ -14,7 +58,8 @@
 }
 .parentCard {
   color: #000;
-  p, h5{
+  p,
+  h5 {
     white-space: pre-wrap;
   }
 }
@@ -26,31 +71,31 @@
   padding: 5px 10px;
   text-transform: uppercase;
 
-  &:hover, &:focus{
-      border-color: #285e8e !important;
-      background: rgb(83, 154, 182) !important;
-      z-index: 1;
-      color: #ffffff !important;
+  &:hover,
+  &:focus {
+    border-color: #285e8e !important;
+    background: rgb(83, 154, 182) !important;
+    z-index: 1;
+    color: #ffffff !important;
   }
-
 }
 
-.custom-button{
-    @extend .btn-primary;
+.custom-button {
+  @extend .btn-primary;
+  font-size: 2em;
+  margin-left: auto;
+  margin-right: 20px;
+}
+.reactTabs {
+  text-align: center;
+  .tab {
     font-size: 2em;
-    margin-left: auto;
-    margin-right:20px;
-}
-.reactTabs{
-    text-align: center;
-    .tab{
-        font-size: 2em;
-    }
+  }
 }
 
-.employment{
-    background: #fff;
-    color: #919191;
+.employment {
+  background: #fff;
+  color: #919191;
 }
 
 .markdown {

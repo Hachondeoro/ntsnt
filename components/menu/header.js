@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from "react";
+import Link from "next/link";
+import React, { useEffect } from "react";
+import useOnclickOutside from "react-cool-onclickoutside";
 import Breakpoint, {
   BreakpointProvider,
-  setDefaultBreakpoints,
+  setDefaultBreakpoints
 } from "react-socks";
-import Link from "next/link";
-import { header } from "react-bootstrap";
-import useOnclickOutside from "react-cool-onclickoutside";
 
 setDefaultBreakpoints([{ xs: 0 }, { l: 1199 }, { xl: 1200 }]);
 
@@ -76,7 +75,7 @@ const Header = () => {
             <div className="navbar-title navbar-item">
               <NavLink href="/">
                 <img
-                  src="./images/footer-logo.png"
+                  src="/images/footer-logo.png"
                   className="img-fluid"
                   alt="#"
                 />
@@ -107,50 +106,18 @@ const Header = () => {
                     </NavLink>
                   </div>
                   <div className="navbar-item">
-                    <NavLink href="/services" onClick={() => btn_icon(!showmenu)}>
+                    <NavLink href="/awards" onClick={() => btn_icon(!showmenu)}>
+                      Awards
+                    </NavLink>
+                  </div>
+                  <div className="navbar-item">
+                    <NavLink
+                      href="/services"
+                      onClick={() => btn_icon(!showmenu)}
+                    >
                       Services
                     </NavLink>
                   </div>
-                  {/* <div className="navbar-item">
-                    <div ref={ref1}>
-                      <div
-                        className="dropdown-custom dropdown-toggle btn"
-                        onClick={handleBtnClick1}
-                      >
-                        Service
-                      </div>
-                      {openMenu1 && (
-                        <div className="item-dropdown">
-                          <div className="dropdown" onClick={closeMenu1}>
-                            <NavLink
-                              to="/service"
-                              onClick={() => btn_icon(!showmenu)}
-                            >
-                              Modern Design
-                            </NavLink>
-                            <NavLink
-                              to="/service1"
-                              onClick={() => btn_icon(!showmenu)}
-                            >
-                              Interior
-                            </NavLink>
-                            <NavLink
-                              to="/service2"
-                              onClick={() => btn_icon(!showmenu)}
-                            >
-                              Architecture
-                            </NavLink>
-                            <NavLink
-                              to="/service3"
-                              onClick={() => btn_icon(!showmenu)}
-                            >
-                              Exterior
-                            </NavLink>
-                          </div>
-                        </div>
-                      )}
-                    </div>
-                  </div> */}
                   <div className="navbar-item">
                     <NavLink
                       href="/employment"
@@ -183,29 +150,12 @@ const Header = () => {
                   <NavLink href="/projects">Projects</NavLink>
                 </div>
                 <div className="navbar-item">
+                  <NavLink href="/awards">Awards</NavLink>
+                </div>
+                <div className="navbar-item">
                   <NavLink href="/services">Services</NavLink>
                 </div>
-                {/* <div className="navbar-item">
-                  <div ref={ref1}>
-                    <div
-                      className="dropdown-custom dropdown-toggle btn"
-                      onMouseEnter={handleBtnClick1}
-                      onMouseLeave={closeMenu1}
-                    >
-                      Service
-                      {openMenu1 && (
-                        <div className="item-dropdown">
-                          <div className="dropdown" onClick={closeMenu1}>
-                            <NavLink href="/service">Modern Design</NavLink>
-                            <NavLink href="/service1">Interior</NavLink>
-                            <NavLink href="/service2">Architecture</NavLink>
-                            <NavLink href="/service3">Exterior</NavLink>
-                          </div>
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                </div> */}
+
                 <div className="navbar-item">
                   <NavLink href="/employment">Employment</NavLink>
                 </div>

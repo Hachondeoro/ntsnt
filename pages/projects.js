@@ -9,9 +9,7 @@ import ReactMarkdown from "react-markdown";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import {
   Button,
-  Card,
-  CardBody,
-  CardImg,
+  Card, CardImg,
   CardTitle,
   Col,
   Modal,
@@ -139,7 +137,7 @@ const Projects = ({ data }) => {
               <Tab>COMMERCIAL</Tab>
             </TabList>
 
-            <TabPanel>
+            <TabPanel className="col-12 col-md-9 mx-auto d-block">
               <div>
                 {/* The Modal data.allProjects[currentIndex] is a bit messy, but that's it */}
                 <Modal
@@ -181,20 +179,19 @@ const Projects = ({ data }) => {
                                   alt="Card image cap"
                                 />
 
-                                <CardBody>
+                                <div className="special-card">
                                   <CardTitle
                                     tag="h5"
-                                    className="mb-2 text-muted"
+                                    className="mb-0 heading-card"
                                   >
-                                    {item.title}
+                                    <Button
+                                      onClick={() => toggleResidential(index)}
+                                      className="special-button"
+                                    >
+                                      {item.title}
+                                    </Button>
                                   </CardTitle>
-                                  <Button
-                                    color="primary"
-                                    onClick={() => toggleResidential(index)}
-                                  >
-                                    View More
-                                  </Button>
-                                </CardBody>
+                                </div>
                               </Card>
                             </div>
                           </FadeInImage>
@@ -205,7 +202,7 @@ const Projects = ({ data }) => {
                 </section>
               </div>
             </TabPanel>
-            <TabPanel>
+            <TabPanel className="col-12 col-md-9 mx-auto d-block">
               <div>
                 {/* The Modal data.allProjects[currentIndex] is a bit messy, but that's it */}
                 <Modal
@@ -250,20 +247,20 @@ const Projects = ({ data }) => {
                                   src={item.image[0].url}
                                   alt="Card image cap"
                                 />
-                                <CardBody>
+
+                                <div className="special-card">
                                   <CardTitle
                                     tag="h5"
-                                    className="mb-2 text-muted"
+                                    className="mb-0 heading-card"
                                   >
-                                    {item.title}
+                                    <Button
+                                      onClick={() => toggleCommercial(index)}
+                                      className="special-button"
+                                    >
+                                      {item.title}
+                                    </Button>
                                   </CardTitle>
-                                  <Button
-                                    color="primary"
-                                    onClick={() => toggleCommercial(index)}
-                                  >
-                                    View More
-                                  </Button>
-                                </CardBody>
+                                </div>
                               </Card>
                             </div>
                           </FadeInImage>

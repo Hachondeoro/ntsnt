@@ -31,7 +31,7 @@ export const FadeInRegular = ({ children }) => (
 );
 
 export const FadeInImage = ({ children }) => (
-  <ScrollTrigger start="-500px center" end="+=100" scrub={0.5}>
+  <ScrollTrigger start="-550px center" end="+=100" scrub={0.5}>
     <Tween from={{ opacity: 0, scale:0}}  ease="expo.inout" >
       {children}
     </Tween>
