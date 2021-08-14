@@ -32,12 +32,11 @@ export const FadeInRegular = ({ children }) => (
 
 export const FadeInImage = ({ children }) => (
   <ScrollTrigger start="-550px center" end="+=100" scrub={0.5}>
-    <Tween from={{ opacity: 0, scale:0}}  ease="expo.inout" >
+    <Tween from={{ opacity: 0, scale: 0 }} ease="expo.inout">
       {children}
     </Tween>
   </ScrollTrigger>
 );
-
 
 export const RepeatTilt = ({ children }) => (
   <Tween
@@ -46,6 +45,16 @@ export const RepeatTilt = ({ children }) => (
   >
     {children}
   </Tween>
+);
+export const FadeInText = ({ children }) => (
+  <Timeline target={children} repeat={-1}>
+    {/* prettier-ignore */}
+    <>
+      <Tween from={{ opacity: 0,  scale:0.1}}/>
+      <Tween to={{ opacity: 1, scale:1.2}} duration={4} ease="expo.out(1.4)"/>
+      <Tween to={{ opacity: 0, scale:1.5}} duration={3}/>
+    </>
+  </Timeline>
 );
 
 export const BounceAround = ({ children }) => {

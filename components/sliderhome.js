@@ -1,3 +1,4 @@
+import { FadeInText } from "@components/gsap/gsapComponents";
 import Link from "next/link";
 import React from "react";
 import Slider from "react-animated-slider";
@@ -36,14 +37,18 @@ const SliderHome = () => (
           style={{ background: `url('${item.image}') no-repeat center center` }}
         >
           <div className="inner backgroundHome">
-            <h1>{item.title}</h1>
-            <p>{item.description}</p>
-            <Link href={item.link}>
-              <button>
-                <span className="shine"></span>
-                <span>{item.button}</span>
-              </button>
-            </Link>
+            <FadeInText>
+              <div className="fadeText">
+                <h1>{item.title}</h1>
+                <p>{item.description}</p>
+                <Link href={item.link}>
+                  <button>
+                    <span className="shine"></span>
+                    <span>{item.button}</span>
+                  </button>
+                </Link>
+              </div>
+            </FadeInText>
           </div>
         </div>
       ))}

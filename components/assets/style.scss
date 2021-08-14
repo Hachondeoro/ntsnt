@@ -600,7 +600,7 @@ section{
   text-align: left;
 }
 .slider-content .inner {
-  padding: 40px 60px;
+  padding: 50px 70px;
   box-sizing: border-box;
   position: absolute;
   width: 60%;
@@ -609,7 +609,7 @@ section{
   border-radius: 0 0 20%/100% 0;
   // border-bottom-right-radius: 25%/50%;
   -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+          transform: translate(-60%, -50%);
 }
 .slider-content .inner button{
   font-weight: 500;
