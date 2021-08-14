@@ -16,14 +16,14 @@ const About = () => (
       <section
         className="jumbotron breadcumb"
         style={{
-          backgroundImage: `url(${"./images/banners/banner3.jpg"})`,
+          backgroundImage: `url(${"/images/banners/highriseBanner.png"})`,
         }}
       >
         <div className="mainbreadcumb">
           <div className="container-fluid">
             <div className="row m-10-hor">
               <div className="col-md-6">
-                <h1>About us</h1>
+                <h1>ABOUT US</h1>
               </div>
               <div className="col-md-6">
                 <div className="list">

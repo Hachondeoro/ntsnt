@@ -43,13 +43,13 @@ const Contact = () => {
       <div>
         <section
           className="jumbotron breadcumb"
-          style={{ backgroundImage: `url(${"/images/banners/banner3.jpg"})` }}
+          style={{ backgroundImage: `url(${"/images/banners/highriseBanner.png"})` }}
         >
           <div className="mainbreadcumb">
             <div className="container-fluid">
               <div className="row m-10-hor">
                 <div className="col-md-6">
-                  <h1>Contact</h1>
+                  <h1>CONTACT</h1>
                 </div>
                 <div className="col-md-6">
                   <div className="list">

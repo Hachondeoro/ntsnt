@@ -9,21 +9,21 @@ const content = [
     description: "Your best solutions",
     button: "More Detail",
     link: "/about",
-    image: "./images/bannerInterior2.jpg",
+    image: "/images/homeBanners/fancybuilding.png",
   },
   {
     title: "Northern Trade Solutions",
     description: "Your best solutions",
     button: "More Detail",
     link: "/about",
-    image: "./images/bannerConferenceroom.jpg",
+    image: "/images/homeBanners/highrise building.png",
   },
   {
     title: "Northern Trade Solutions",
     description: "Your best solutions",
     button: "More Detail",
     link: "/about",
-    image: "./images/banner2Fancyhouse.jpg",
+    image: "/images/homeBanners/lighthouse.png",
   },
 ];
 

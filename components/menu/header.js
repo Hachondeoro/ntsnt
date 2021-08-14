@@ -106,11 +106,6 @@ const Header = () => {
                     </NavLink>
                   </div>
                   <div className="navbar-item">
-                    <NavLink href="/awards" onClick={() => btn_icon(!showmenu)}>
-                      Awards
-                    </NavLink>
-                  </div>
-                  <div className="navbar-item">
                     <NavLink
                       href="/services"
                       onClick={() => btn_icon(!showmenu)}
@@ -148,9 +143,6 @@ const Header = () => {
                 </div>
                 <div className="navbar-item">
                   <NavLink href="/projects">Projects</NavLink>
-                </div>
-                <div className="navbar-item">
-                  <NavLink href="/awards">Awards</NavLink>
                 </div>
                 <div className="navbar-item">
                   <NavLink href="/services">Services</NavLink>

@@ -82,7 +82,7 @@ const About = () => (
             <img src="/images/awards/Picture26.png" />
           </div>
         </div>
-        <Link href="/awards">
+        <Link href="/">
           <ArrowLeftCircleFill color="black" size={60} className="arrowBack" />
         </Link>
       </section>

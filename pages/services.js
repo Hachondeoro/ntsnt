@@ -15,13 +15,13 @@ const Services = () => {
       <div className="wraperitem">
         <section
           className="jumbotron breadcumb"
-          style={{ backgroundImage: `url(${"./images/banners/banner2.jpg"})` }}
+          style={{ backgroundImage: `url(${"/images/banners/highriseBanner.png"})` }}
         >
           <div className="mainbreadcumb">
             <div className="container-fluid">
               <div className="row m-10-hor">
                 <div className="col-md-6">
-                  <h1>Services</h1>
+                  <h1>SERVICES</h1>
                 </div>
                 <div className="col-md-6">
                   <div className="list">
