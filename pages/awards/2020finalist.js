@@ -16,7 +16,7 @@ const About = () => (
       <section
         className="jumbotron breadcumb"
         style={{
-          backgroundImage: `url(${"../images/banners/banner3.jpg"})`,
+          backgroundImage: `url(${"../images/banners/highriseBanner.png"})`,
         }}
       >
         <div className="mainbreadcumb">
