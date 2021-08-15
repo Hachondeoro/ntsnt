@@ -62,7 +62,12 @@
     cursor: pointer;
   }
 }
-
+.row-no-padding {
+  [class*="col-"] {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
 .projectCards {
   color: #000;
   h5 {

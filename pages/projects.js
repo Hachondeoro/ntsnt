@@ -9,11 +9,7 @@ import ReactMarkdown from "react-markdown";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import {
   Button,
-  Card,
-  CardImg,
-  CardTitle,
-  Col,
-  Modal,
+  Card, CardTitle, Modal,
   ModalBody,
   ModalFooter,
   ModalHeader,
@@ -139,7 +135,7 @@ const Projects = ({ data }) => {
               <Tab>COMMERCIAL</Tab>
               <Tab>RESIDENTIAL</Tab>
             </TabList>
-            <TabPanel className="col-12 col-md-9 mx-auto d-block">
+            <TabPanel>
               <div>
                 {/* The Modal data.allProjects[currentIndex] is a bit messy, but that's it */}
                 <Modal
@@ -168,47 +164,38 @@ const Projects = ({ data }) => {
                   </ModalFooter>
                 </Modal>
               </div>
-              <div>
-                <section className="container-fluid black_more">
-                  <div className="projectCards">
-                    <Row>
-                      {data.allProjectCommercials.map((item, index) => (
-                        <Col className="ml-auto mr-auto text-center" md="6" lg="4" xl="3">
-                          <FadeInImage>
-                            <div>
-                              <Card className="h-100">
-                                <CardImg
-                                  top
-                                  width="100%"
-                                  height="200px"
-                                  src={item.image[0].url}
-                                  alt="Card image cap"
-                                />
+              <div className="projectCards col-12 col-lg-10  mx-auto d-block p-0">
+                <Row className="justify-content-center">
+                  {data.allProjectCommercials.map((item, index) => (
+                    <FadeInImage>
+                      <div>
+                        <Card>
+                          <img
+                            top
+                            height="200px"
+                            width="300px"
+                            src={item.image[0].url}
+                            alt="Card image cap"
+                          />
 
-                                <div className="special-card">
-                                  <CardTitle
-                                    tag="h5"
-                                    className="mb-0 heading-card"
-                                  >
-                                    <Button
-                                      onClick={() => toggleCommercial(index)}
-                                      className="special-button"
-                                    >
-                                      {item.title}
-                                    </Button>
-                                  </CardTitle>
-                                </div>
-                              </Card>
-                            </div>
-                          </FadeInImage>
-                        </Col>
-                      ))}
-                    </Row>
-                  </div>
-                </section>
+                          <div className="special-card">
+                            <CardTitle tag="h5" className="mb-0 heading-card">
+                              <Button
+                                onClick={() => toggleCommercial(index)}
+                                className="special-button"
+                              >
+                                {item.title}
+                              </Button>
+                            </CardTitle>
+                          </div>
+                        </Card>
+                      </div>
+                    </FadeInImage>
+                  ))}
+                </Row>
               </div>
             </TabPanel>
-            <TabPanel className="col-12 col-md-9 mx-auto d-block">
+            <TabPanel>
               <div>
                 {/* The Modal data.allProjects[currentIndex] is a bit messy, but that's it */}
                 <Modal
@@ -233,44 +220,35 @@ const Projects = ({ data }) => {
                   </ModalFooter>
                 </Modal>
               </div>
-              <div>
-                <section className="container-fluid black_more">
-                  <div className="projectCards">
-                    <Row>
-                      {data.allProjects.map((item, index) => (
-                        <Col className="ml-auto mr-auto text-center" md="6" lg="4" xl="3">
-                          <FadeInImage>
-                            <div>
-                              <Card className="h-100">
-                                <CardImg
-                                  top
-                                  width="100%"
-                                  height="200px"
-                                  src={item.image[0].url}
-                                  alt="Card image cap"
-                                />
+              <div className="projectCards col-12 col-lg-10  mx-auto d-block p-0">
+                <Row className="justify-content-center">
+                  {data.allProjects.map((item, index) => (
+                    <FadeInImage>
+                      <div>
+                        <Card>
+                          <img
+                            top
+                            height="200px"
+                            width="300px"
+                            src={item.image[0].url}
+                            alt="Card image cap"
+                          />
 
-                                <div className="special-card">
-                                  <CardTitle
-                                    tag="h5"
-                                    className="mb-0 heading-card"
-                                  >
-                                    <Button
-                                      onClick={() => toggleResidential(index)}
-                                      className="special-button"
-                                    >
-                                      {item.title}
-                                    </Button>
-                                  </CardTitle>
-                                </div>
-                              </Card>
-                            </div>
-                          </FadeInImage>
-                        </Col>
-                      ))}
-                    </Row>
-                  </div>
-                </section>
+                          <div className="special-card">
+                            <CardTitle tag="h5" className="mb-0 heading-card">
+                              <Button
+                                onClick={() => toggleResidential(index)}
+                                className="special-button"
+                              >
+                                {item.title}
+                              </Button>
+                            </CardTitle>
+                          </div>
+                        </Card>
+                      </div>
+                    </FadeInImage>
+                  ))}
+                </Row>
               </div>
             </TabPanel>
           </Tabs>
