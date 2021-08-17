@@ -41,7 +41,7 @@ const Services = () => {
           <br></br>
           <h1 style={{ textAlign: "center" }}>OUR SERVICES</h1>
           <br></br>
-          <div className="col-12 col-md-8 mx-auto d-block">
+          <div className="col-12 col-md-9 mx-auto d-block">
             <div className="row">
               <div className="col-md-6 pr-md-0">
                 <img

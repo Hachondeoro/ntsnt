@@ -600,16 +600,21 @@ section{
   text-align: left;
 }
 .slider-content .inner {
-  padding: 50px 70px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   box-sizing: border-box;
-  position: absolute;
-  width: 60%;
-  top: 50%;
-  left: 35%;
+  // position: absolute;
+  width: 100%;
+  margin-top: 20vh;
+  // margin-left:5%;
   border-radius: 0 0 20%/100% 0;
   // border-bottom-right-radius: 25%/50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-60%, -50%);
+  // -webkit-transform: translate(-50%, -50%);
+  // transform: translate(-60%, -50%);
+  @media only screen and (max-width: 600px) {
+      padding-left: 10%;
+      // left: 50%;
+  }
 }
 .slider-content .inner button{
   font-weight: 500;

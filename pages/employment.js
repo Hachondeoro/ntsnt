@@ -38,6 +38,7 @@ const Employment = () => {
           </div>
         </section>
 
+        <div className="col-12 col-md-9 mx-auto d-block">
         <section className="container-fluid black">
           <div className="row m-10-hor">
             <div className="col-md-5">
@@ -64,7 +65,7 @@ const Employment = () => {
         </section>
 
         <section className="container-fluid employment">
-          <div className="row m-10-hor">
+          <div className="row">
             <div className="col-md-3">
               <img
                 src="/images/employment/engineer.png"
@@ -157,6 +158,7 @@ const Employment = () => {
             </div>
           </div>
         </section>
+        </div >
 
         <Footer />
       </div>

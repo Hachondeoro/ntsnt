@@ -51,8 +51,8 @@ export const FadeInText = ({ children }) => (
     {/* prettier-ignore */}
     <>
       <Tween from={{ opacity: 0,  scale:0.1}}/>
-      <Tween to={{ opacity: 1, scale:1.2}} duration={4} ease="expo.out(1.4)"/>
-      <Tween to={{ opacity: 0, scale:1.5}} duration={3}/>
+      <Tween to={{ opacity: 1, scale:1.0}} duration={4} ease="expo.out(1.2)"/>
+      <Tween to={{ opacity: 0, scale:1.0}} duration={3}/>
     </>
   </Timeline>
 );
