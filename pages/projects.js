@@ -220,8 +220,8 @@ const Projects = ({ data }) => {
                   </ModalFooter>
                 </Modal>
               </div>
-              <div className="projectCards col-12 col-lg-9  mx-auto d-block p-0">
-                <Row className="justify-content-center">
+              <div className="projectCards col-12 mx-auto d-block p-0">
+                <Row className="justify-content-center projectPadding">
                   {data.allProjects.map((item, index) => (
                     <FadeInImage>
                       <div>
@@ -229,7 +229,7 @@ const Projects = ({ data }) => {
                           <img
                             top
                             height="200px"
-                            width="300px"
+                            width="280px"
                             src={item.image[0].url}
                             alt="Card image cap"
                           />
