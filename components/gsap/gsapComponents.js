@@ -1,22 +1,19 @@
 import { Reveal, ScrollTrigger, Timeline, Tween } from "react-gsap";
 import useWindowDimensions from "./useWindowDimensions";
+import { gsap } from "gsap"; // pure gsap
+import { ScrollTrigger as gsapScrollTrigger } from "gsap/dist/ScrollTrigger"; // pure gsap
+import React, { useEffect } from "react";
 
 export const FadeInLeft = ({ children }) => (
   <Reveal repeat trigger={<div />}>
-    <Tween
-      from={{ opacity: 0, transform: "translate3d(-40vw, 0, 0)" }}
-      ease="back.out(1.4)"
-    >
+    <Tween from={{ opacity: 0, transform: "translate3d(-40vw, 0, 0)" }} ease="back.out(1.4)">
       {children}
     </Tween>
   </Reveal>
 );
 export const FadeInRight = ({ children }) => (
-  <Reveal repeat trigger={<div />}>
-    <Tween
-      from={{ opacity: 0, transform: "translate3d(+40vw, 0, 0)" }}
-      ease="back.out(1.4)"
-    >
+  <Reveal repeat>
+    <Tween from={{ opacity: 0, transform: "translate3d(+40vw, 0, 0)" }} ease="back.out(1.4)">
       {children}
     </Tween>
   </Reveal>
@@ -32,17 +29,40 @@ export const FadeInRegular = ({ children }) => (
 
 export const FadeInImage = ({ children }) => (
   <ScrollTrigger start="-550px center" end="+=100" scrub={0.5}>
-    <Tween from={{ opacity: 0, scale: 0 }} ease="expo.inout">
+    <Tween from={{ opacity: 0, scale: 0 }} stagger={0.2}>
       {children}
     </Tween>
   </ScrollTrigger>
 );
 
+export const FadeInImageGrid = ({ children }) => {
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      gsap.registerPlugin(gsapScrollTrigger);
+    }
+    gsap.to(".box", { y: 100, scale: 0 });
+    gsapScrollTrigger.batch(".box", {
+      onEnter: (batch) =>
+        gsap.to(batch, { opacity: 1, y: 0, scale: 1, stagger: 0.15, overwrite: true }),
+      onLeaveBack: (batch) =>
+        gsap.set(batch, { opacity: 0, y: 100, scale: 0, stagger: 0.1, overwrite: true }),
+      start: "top bottom-=80px",
+    });
+    // gsapScrollTrigger.addEventListener("refreshInit", () =>
+    //   gsap.set(".box", { y: -100, opacity: 0 })
+    // );
+    // gsapScrollTrigger.refresh();
+  }, []);
+
+  return (
+    <div className="box">
+      <div className="container">{children}</div>
+    </div>
+  );
+};
+
 export const RepeatTilt = ({ children }) => (
-  <Tween
-    to={{ opacity: 0, repeat: -1, yoyo: true, repeatDelay: 0.5 }}
-    duration={2}
-  >
+  <Tween to={{ opacity: 0, repeat: -1, yoyo: true, repeatDelay: 0.5 }} duration={2}>
     {children}
   </Tween>
 );
@@ -50,9 +70,9 @@ export const FadeInText = ({ children }) => (
   <Timeline target={children} repeat={-1}>
     {/* prettier-ignore */}
     <>
-      <Tween from={{ opacity: 0,  scale:0.1}}/>
-      <Tween to={{ opacity: 1, scale:1.0}} duration={4} ease="expo.out(1.2)"/>
-      <Tween to={{ opacity: 0, scale:1.0}} duration={3}/>
+      <Tween from={{ opacity: 0, y:100}}/>
+      <Tween to={{ opacity: 1}} duration={4}/>
+      <Tween to={{ opacity: 0}} duration={3}/>
     </>
   </Timeline>
 );
