@@ -110,26 +110,26 @@ const Projects = ({ data }) => {
           <div className="row m-10-hor">
             <div className="col-md-5">
               <FadeInRegular>
-                <div className="heading">
+                <div className="heading" style={{ color:"black"}}>
                   Perfection in<span className="br"></span> Design
                 </div>
               </FadeInRegular>
             </div>
 
             <div className="col-md-7">
-              <div className="content">
+              <p className="content">
                 Northern Trade Solutions (NTS) is proud of the size and importance of projects we
                 have been involved in since 2010. As a relatively young, but experienced company, we
                 believe these projects are a reflection of our strong position in the building and
                 construction industry and the need for quality building and fit out services in the
                 Territory.
-              </div>
+              </p>
             </div>
           </div>
         </section>
         <div>
           <Tabs className="reactTabs">
-            <TabList className="tab">
+            <TabList className="tab" style={{ color:"black"}}>
               <Tab>COMMERCIAL</Tab>
               <Tab>RESIDENTIAL</Tab>
             </TabList>

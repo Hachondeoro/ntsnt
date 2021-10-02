@@ -27,7 +27,7 @@ const Home = () => {
           </div>
         </section>
 
-        <div className="col-12 col-md-9 mx-auto d-block">
+        <div className="col-12 col-md-9 mx-auto d-block" style={{ color:"black"}}>
           <section className="container-fluid black_more">
             <div className="row m-10-hor">
               <div className="col-md-5">
@@ -41,7 +41,7 @@ const Home = () => {
               </div>
 
               <div className="col-md-7">
-                <div className="content">
+                <p className="content">
                   Northern Trade Solutions (NTS) has been providing the Northern
                   Territory building industry with a comprehensive range of
                   building and fit out services since 2010. These services
@@ -49,7 +49,7 @@ const Home = () => {
                   installation, metal fabrication, carpentry and joinery,
                   glazing, external facade services, demolition and asbestos
                   removal.
-                </div>
+                </p>
               </div>
             </div>
           </section>

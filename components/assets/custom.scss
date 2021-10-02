@@ -13,6 +13,7 @@
 .fadeText {
   padding-left: 10%;
   @media only screen and (max-width: 600px) {
+    margin-top: 8vh;
     padding-left: 0px;
   }
 }
@@ -205,4 +206,12 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+.ourservices{
+  color:black;
+  img{
+    height:20em;
+    align-items: right;
+  }
 }

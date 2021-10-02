@@ -2,8 +2,8 @@ import Link from "next/link";
 import React from "react";
 
 const Awards = () => (
-  <div className="wraperitem">
-    <h1 style={{ textAlign: "center" }}>OUR AWARDS</h1>
+  <div className="wraperitem mt-5">
+    <h1 style={{ textAlign: "center", color:"black"}}>OUR AWARDS</h1>
     <section className="text-center awards">
       <div className="row justify-content-center">
         <div className="col-9 col-md-6 col-lg-2">

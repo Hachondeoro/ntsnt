@@ -31,11 +31,11 @@
 
 /*color*/
 $white: #fff;
-$gray: #bbb;
-$black: rgb(0, 53, 74);
+$gray: #6e6e6e;
+$black: rgb(255, 255, 255);
 $black_soft: #272727;
 $black_col: #2e333c;
-$black_more: rgb(4, 71, 98);
+$black_more: rgb(255, 255, 255);
 $color: #c8b16f;
 $color_more: #c7ab5a;
 
@@ -53,6 +53,10 @@ body {
   background: $black;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+p{
+  color:#6e6e6e
 }
 #mainpreloader{
   .preloader{
@@ -432,8 +436,8 @@ section{
       }
       .nav-icon {
       position: absolute;
-      top: 33px;
-      right: 25px;
+      top: 15px;
+      right: 35px;
       display: block;
       width: 20px;
       height: 10px;
@@ -606,7 +610,7 @@ section{
   // position: absolute;
   width: 35%;
   margin-top: 30vh;
-  margin-left:20%;
+  margin-left:13vw;
   border-radius: 0 0 20%/100% 0;
   // border-bottom-right-radius: 25%/50%;
   // -webkit-transform: translate(-50%, -50%);
@@ -706,14 +710,14 @@ section{
   font-size: 14px;
   display: block;
 }
-@media (max-height: 500px) {
-  .slider-wrapper, .slide {
-    height: calc(100vh - 75px);
-  }    
-}
+// @media (max-height: 500px) {
+//   .slider-wrapper, .slide {
+//     height: calc(100vh - 75px);
+//   }    
+// }
 @media (max-width: 640px) {
   .slider-wrapper, .slide {
-    height: calc(80vh - 75px);
+    height: 90vh
   }    
 }
 @media (max-height: 600px) {
@@ -1343,13 +1347,17 @@ footer{
   padding-right: 0px !important;
   padding-left: 0px !important;
   overflow: hidden;
+  background:rgb(4, 71, 98);
+  p{
+    color:#ffffff;
+  }
   .bg-footer{
     position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
-    opacity: .3;
+    // opacity: .3;
     img{
       width: 100%;
       height: 100%;
@@ -1369,6 +1377,7 @@ footer{
       line-height: 1.6;
       letter-spacing: .6px;
       margin-bottom: 10px;
+      color:#ffffff;
       .link{
         font-size: .96rem;
         width: max-content;
@@ -1430,7 +1439,7 @@ footer{
   width: 100%;
   margin-top: 90px;
   padding: 30px 15px;
-  background: rgba(0,0,0,.6);
+  background-color:rgb(51, 54, 56);
   .content{
     font-size: .8rem;
     opacity: 1;

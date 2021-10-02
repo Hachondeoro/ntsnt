@@ -1,10 +1,8 @@
 import Link from "next/link";
 import React, { useEffect } from "react";
 import useOnclickOutside from "react-cool-onclickoutside";
-import Breakpoint, {
-  BreakpointProvider,
-  setDefaultBreakpoints
-} from "react-socks";
+import Breakpoint, { BreakpointProvider, setDefaultBreakpoints } from "react-socks";
+import { RiMenuFoldFill } from "react-icons/ri";
 
 setDefaultBreakpoints([{ xs: 0 }, { l: 1199 }, { xl: 1200 }]);
 
@@ -74,11 +72,7 @@ const Header = () => {
           <div className="logo">
             <div className="navbar-title navbar-item">
               <NavLink href="/">
-                <img
-                  src="/images/footer-logo.png"
-                  className="img-fluid"
-                  alt="#"
-                />
+                <img src="/images/ntsnt logo.png" className="my-0 py-0" height="60em" alt="#" />
               </NavLink>
             </div>
           </div>
@@ -98,34 +92,22 @@ const Header = () => {
                     </NavLink>
                   </div>
                   <div className="navbar-item">
-                    <NavLink
-                      href="/projects"
-                      onClick={() => btn_icon(!showmenu)}
-                    >
+                    <NavLink href="/projects" onClick={() => btn_icon(!showmenu)}>
                       Projects
                     </NavLink>
                   </div>
                   <div className="navbar-item">
-                    <NavLink
-                      href="/services"
-                      onClick={() => btn_icon(!showmenu)}
-                    >
+                    <NavLink href="/services" onClick={() => btn_icon(!showmenu)}>
                       Services
                     </NavLink>
                   </div>
                   <div className="navbar-item">
-                    <NavLink
-                      href="/employment"
-                      onClick={() => btn_icon(!showmenu)}
-                    >
+                    <NavLink href="/employment" onClick={() => btn_icon(!showmenu)}>
                       Employment
                     </NavLink>
                   </div>
                   <div className="navbar-item">
-                    <NavLink
-                      href="/contact"
-                      onClick={() => btn_icon(!showmenu)}
-                    >
+                    <NavLink href="/contact" onClick={() => btn_icon(!showmenu)}>
                       Contact
                     </NavLink>
                   </div>
@@ -160,9 +142,7 @@ const Header = () => {
         </div>
 
         <button className="nav-icon" onClick={() => btn_icon(!showmenu)}>
-          <div className="menu-line white"></div>
-          <div className="menu-line1 white"></div>
-          <div className="menu-line2 white"></div>
+          <RiMenuFoldFill color={"white"} size={50}/>
         </button>
       </div>
     </header>

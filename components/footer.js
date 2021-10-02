@@ -3,10 +3,7 @@ import Link from "next/link";
 
 const Footer = () => (
   <>
-    <footer className="container-fluid black_more">
-      <div className="bg-footer">
-        <img src="/img/footer-img.jpg" alt="bg-footer" />
-      </div>
+    <footer className="container-fluid">
       <div className="row m-10-hor">
         <div className="col-md-4">
           <div className="footer-col">
@@ -69,10 +66,10 @@ const Footer = () => (
                   <i className="fa fa-linkedin"></i>
                 </a>
               </div>
-              <div className="socialicon">
+              {/* <div className="socialicon">
                 <span className="shine"></span>
                 <i className="fa  fa-instagram"></i>
-              </div>
+              </div> */}
               <div className="list mt-2">
                 <i className="fa fa-envelope-o"></i>
                 <a

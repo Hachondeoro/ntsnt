@@ -13,18 +13,18 @@ const BannerContact = () => (
             <img
               src="./images/bannerInterior2.jpg"
               alt="imgbanner"
-              className="w-100 border-radius"
+              className="w-100 rounded"
             />
           </FadeInImage>
         </div>
-        <div className="col-md-6 centered">
+        <div className="col-md-6 centered" style={{ color:"black"}}>
           <div>
             <FadeInRegular>
               <div
                 className="heading"
                 style={{ fontVariant: "all-small-caps" }}
               >
-                No brilliant design is too difficult for us
+                Perfect Design
               </div>
             </FadeInRegular>
             <p>
@@ -45,7 +45,7 @@ const BannerContact = () => (
             <Link href="/contact">
               <div className="btn">
                 <span className="shine"></span>
-                <span>Contact Us</span>
+                <span style={{ color:"black"}}>Contact Us</span>
               </div>
             </Link>
           </div>

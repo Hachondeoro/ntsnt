@@ -39,7 +39,7 @@ const Employment = () => {
         </section>
 
         <div className="col-12 col-md-9 mx-auto d-block">
-        <section className="container-fluid black">
+        <section className="container-fluid black" style={{ color:"black"}}>
           <div className="row m-10-hor">
             <div className="col-md-5">
               <div className="heading">
@@ -49,17 +49,17 @@ const Employment = () => {
             </div>
 
             <div className="col-md-7">
-              <div className="content">
+              <p className="content">
                 The Northern Trade Solutions (NTS) philosophy “empowering
                 people” is at the forefront of our recruitment. We endeavour to
                 work with passionate, dedicated and reliable professionals to
                 ensure the Territory building and construction industry has
                 access to high quality workmanship and services.
-              </div>
-              <div className="content">
+              </p>
+              <p className="content">
                 NTS is constantly on the lookout for experienced and passionate
                 employees to join our team. We seek employees who value:
-              </div>
+              </p>
             </div>
           </div>
         </section>

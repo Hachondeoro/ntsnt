@@ -64,6 +64,7 @@
     "react-dom": "^16.13.1",
     "react-gsap": "^3.2.1",
     "react-hook-form": "^6.4.0",
+    "react-icons": "^4.2.0",
     "react-image-gallery": "^1.2.5",
     "react-markdown": "^6.0.2",
     "react-photo-gallery": "^8.0.0",

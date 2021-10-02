@@ -29,7 +29,7 @@ const content = [
 
 const SliderHome = () => (
   <>
-    <Slider className="slider-wrapper" autoplay={6000}>
+    <Slider className="slider-wrapper" autoplay={6000} touchDisabled={true}>
       {content.map((item, index) => (
         <div
           key={index}

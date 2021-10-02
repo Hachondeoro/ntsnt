@@ -11,25 +11,18 @@ const Contact = () => {
     const failed = document.getElementById("failed");
     e.preventDefault();
 
-    emailjs
-      .sendForm(
-        "gmail",
-        "template_csfdEZiA",
-        e.target,
-        "user_zu7p2b3lDibMCDutH5hif"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          success.classList.add("show");
-          button.classList.add("show");
-          failed.classList.remove("show");
-        },
-        (error) => {
-          console.log(error.text);
-          failed.classList.add("show");
-        }
-      );
+    emailjs.sendForm("gmail", "template_csfdEZiA", e.target, "user_zu7p2b3lDibMCDutH5hif").then(
+      (result) => {
+        console.log(result.text);
+        success.classList.add("show");
+        button.classList.add("show");
+        failed.classList.remove("show");
+      },
+      (error) => {
+        console.log(error.text);
+        failed.classList.add("show");
+      }
+    );
   }
 
   return (
@@ -38,13 +31,11 @@ const Contact = () => {
       pageDescription="Northern Trade Solutions (NTS) has been providing the Northern
             Territory building industry with a comprehensive range of
             building and fit out services since 2010. "
-      keyWords="nt building construction"
-    >
+      keyWords="nt building construction">
       <div>
         <section
           className="jumbotron breadcumb"
-          style={{ backgroundImage: `url(${"/images/banners/highriseBanner.png"})` }}
-        >
+          style={{ backgroundImage: `url(${"/images/banners/highriseBanner.png"})` }}>
           <div className="mainbreadcumb">
             <div className="container-fluid">
               <div className="row m-10-hor">
@@ -64,40 +55,35 @@ const Contact = () => {
             </div>
           </div>
         </section>
-        <section className="container-fluid black_more">
+        <section className="container-fluid black_more" style={{ color: "black" }}>
           <div className="row m-10-hor">
             <div className="col-md-6">
               <div className="text-side">
                 <h2>Get in Touch</h2>
                 <p>
-                  Please contact NTS to discuss your project needs and how we
-                  can work together to support the Northern Territory building &
-                  construction industry.
+                  Please contact NTS to discuss your project needs and how we can work together to
+                  support the Northern Territory building & construction industry.
                 </p>
 
                 <div className="address">
                   <div className="heading">Our Office</div>
                   <div className="list">
                     <i className="fa fa-map"></i>
-                    15 Mel Rd, Berrimah NT 0828
+                    <p>15 Mel Rd, Berrimah NT 0828</p>
                   </div>
                   <div className="list">
                     <i className="fa fa-map-marker"></i>
-                    PO Box 39231 Winnellie NT 0821
-                  </div>
-                  <div className="list">
-                    <i className="fa fa-envelope-o"></i>
-                    <a
-                      href="mailto:info@ntsnt.com.au"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      info@ntsnt.com.au
-                    </a>
+                    <p>PO Box 39231 Winnellie NT 0821</p>
                   </div>
                   <div className="list">
                     <i className="fa fa-phone"></i>
-                    (08) 88 88 88 88
+                    <p>(08) 88 88 88 88</p>
+                  </div>
+                  <div className="list">
+                    <i className="fa fa-envelope-o"></i>
+                    <a href="mailto:info@ntsnt.com.au" target="_blank" rel="noopener noreferrer">
+                      <p>info@ntsnt.com.au</p>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -119,7 +105,7 @@ const Contact = () => {
                   </div>
                   <button type="submit" id="buttonsent">
                     <span className="shine"></span>
-                    <span>Send</span>
+                    <span style={{ color:"black"}}>Send</span>
                   </button>
                 </form>
               </div>
