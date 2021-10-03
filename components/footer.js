@@ -12,9 +12,9 @@ const Footer = () => (
             </div>
             <div className="content">
               <p>
-                Northern Trade Solutions (NTS) is a well-recognised provider of
-                full project solutions, fit out solutions and building and
-                construction services in the Northern Territory.
+                Northern Trade Solutions (NTS) is a well-recognised provider of full project
+                solutions, fit out solutions and building and construction services in the Northern
+                Territory.
               </p>
             </div>
           </div>
@@ -51,8 +51,7 @@ const Footer = () => (
                 <a
                   href="https://www.facebook.com/northerntradesolutions/"
                   rel="noopener noreferrer"
-                  target="_blank"
-                >
+                  target="_blank">
                   <i className="fa fa-facebook-f"></i>
                 </a>
               </div>
@@ -61,8 +60,7 @@ const Footer = () => (
                 <a
                   href="https://www.linkedin.com/company/northern-trade-solutions"
                   rel="noopener noreferrer"
-                  target="_blank"
-                >
+                  target="_blank">
                   <i className="fa fa-linkedin"></i>
                 </a>
               </div>
@@ -72,11 +70,7 @@ const Footer = () => (
               </div> */}
               <div className="list mt-2">
                 <i className="fa fa-envelope-o"></i>
-                <a
-                  href="mailto:info@ntsnt.com.au"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <a href="mailto:info@ntsnt.com.au" target="_blank" rel="noopener noreferrer">
                   {" "}
                   info@ntsnt.com.au
                 </a>
@@ -92,8 +86,7 @@ const Footer = () => (
         <div className="row m-10-hor">
           <div className="col-md-6">
             <div className="content">
-              © Copyright {new Date().getFullYear()} by Frank Espinoza. All
-              rights reserved.
+              © Copyright {new Date().getFullYear()} by Frank Espinoza. All rights reserved.
             </div>
           </div>
         </div>
