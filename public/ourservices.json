@@ -1,0 +1,14 @@
+{
+  "services": [
+    {
+      "title": "PARTITIONS & CEILINGS",
+      "description": "NTS provide specialised partitions and ceiling services. This includes the installation of fire-rated partitions and ceilings, acoustic partitions and ceilings, impact-resistant wall systems, cinema wall and ceiling systems, radiation resistant partitions and ceilings, decorative walls and ceiling paneling systems.",
+      "image": "images/partition-ceilings.png"
+    },
+    {
+      "title": "METAL FABRICATION",
+      "description": "NTS offer a full range of metal building components, including sun-hood screens, window awnings, balustrade and handrails, fences, feature building screens and more.",
+      "image": "images/metal-fabrication.png"
+    }
+  ]
+}
