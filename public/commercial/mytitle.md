@@ -1,25 +1,14 @@
 ---
 title: mytitle
 image: /images/banner2Fancyhouse.jpg
-description: dasdasdasddasdasdasddasdasdasddasdasdasddasdasdasddasdasdasddasdasdasd
-project_details: >-
-  <!--StartFragment-->
-
-
-  * ## [dasdasdasd](http://localhost:3000/admin#/collections/commercialprojects/entries/dasdasdasd)
-
-
-  <!--EndFragment--><!--StartFragment-->
-
-
-  * ## [dasdasdasd](http://localhost:3000/admin#/collections/commercialprojects/entries/dasdasdasd)
-
-
-  <!--EndFragment--><!--StartFragment-->
-
-
-  * ## [dasdasdasd](http://localhost:3000/admin#/collections/commercialprojects/entries/dasdasdasd)
-
-
-  <!--EndFragment-->
+description: this is a text.
+galleryImages:
+  - /images/aboutus.jpg
+  - /images/banner2Fancyhouse.jpg
+  - /images/bannerInterior2.jpg
+project_details: this is a text.this is a text.this is a text.this is a
+  text.this is a text.this is a text.this is a text.this is a text.this is a
+  text.this is a text.this is a text.this is a text.this is a text.this is a
+  text.this is a text.this is a text.this is a text.this is a text.this is a
+  text.this is a text.
 ---
