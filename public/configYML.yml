@@ -11,7 +11,7 @@ logo_url: https://www.ntsnt.com.au/images/ntsnt%20logo.png
 collections:
   - label: "Residential Projects"
     name: "residential_projects"
-    folder: "data"
+    folder: "data/commercial"
     create: true
     fields:
       - { label: Title, name: title, widget: string }

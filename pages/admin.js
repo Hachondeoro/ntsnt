@@ -1,18 +1,12 @@
 import dynamic from "next/dynamic";
-// import config from "public/config.yml";
-
-const Loading = () => (
-  <div className="min-h-screen flex items-center justify-center">
-    <p className="text-gray-500 font-semibold text-xl" >Loading...</p>
-  </div>
-);
+import config from "cms/config";
 
 const CMS = dynamic(
   () =>
     import("netlify-cms-app").then((cms) => {
-      cms.init();
+      cms.init({ config });
     }),
-  { ssr: false, loading: Loading }
+  { ssr: false, loading: () => <p>Loading...</p> }
 );
 
 import React from "react";
@@ -20,7 +14,7 @@ import React from "react";
 const AdminPage = () => {
   return (
     <div>
-      <CMS />
+      <CMS />;
     </div>
   );
 };

@@ -3,34 +3,71 @@ export default {
   backend: {
     name: "github",
     repo: "Hachondeoro/ntsnt",
-    branch: "main",
+    branch: "master",
   },
-  media_folder: "static",
-  public_folder: "static",
+  media_folder: "/public/images",
+  public_folder: "/images",
+  // publish_mode: "editorial_workflow",
+  logo_url: "https://www.ntsnt.com.au/images/ntsnt%20logo.png",
   collections: [
     {
-      name: "pages",
-      label: "Pages",
+      label: "Residential Projects",
+      name: "residentialprojects",
+      folder: "public/residential",
+      create: true,
+      extension: "json",
+      fields: [
+        { label: "Title", name: "title", widget: "string" },
+        { label: "Images", name: "images", widget: "list", summary: '{{fields.image}}', field: { label: "Image", name: "image", widget: "image" } },
+        { label: "Description", name: "description", widget: "text", required: false },
+        { label: "Project Details", name: "project_details", widget: "markdown", required: false },
+      ],
+    },
+    {
+      label: "Commercial Projects",
+      name: "commercialprojects",
+      folder: "public/commercial",
+      extension: "json",
+      create: true,
+      fields: [
+        { label: "Title", name: "title", widget: "string" },
+        { label: "Image", name: "image", widget: "image", required: false },
+        { label: "Description", name: "description", widget: "text", required: false },
+        { label: "Project Details", name: "project_details", widget: "markdown", required: false },
+      ],
+    },
+    {
+      label: "About Us",
+      name: "aboutus",
+      extension: "json",
       files: [
         {
-          label: "Home",
-          name: "home",
-          file: "content/pages/home.md",
+          label: "About Us",
+          name: "aboutus",
+          file: "/public/aboutus.json",
+          fields: [{ name: "title", label: "Title", widget: "markdown" }],
+        },
+      ],
+    },
+    {
+      label: "Our Services",
+      name: "ourservices",
+      extension: "json",
+      files: [
+        {
+          label: "Our Services",
+          name: "ourservices",
+          file: "/public/ourservices.json",
           fields: [
             {
-              label: "Hero Title",
-              name: "hero_title",
-              widget: "string",
-            },
-            {
-              label: "Hero Description",
-              name: "hero_description",
-              widget: "markdown",
-            },
-            {
-              label: "Hero Image",
-              name: "hero_image",
-              widget: "image",
+              label: "Services",
+              name: "services",
+              widget: "list",
+              fields: [
+                { label: "Title", name: "title", widget: "string" },
+                { label: "Description", name: "description", widget: "text", required: false },
+                { label: "Image", name: "image", widget: "image", required: false },
+              ],
             },
           ],
         },
