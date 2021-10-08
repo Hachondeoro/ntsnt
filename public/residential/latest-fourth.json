@@ -3,6 +3,8 @@
   "description": "mytitlemytitle",
   "project_details": "mytitlemytitlemytitlemytitlemytitle",
   "images": [
-    "/images/aboutus.jpg"
+    "/images/aboutus.jpg",
+    "/images/banner1Interior.jpg",
+    "/images/bannerConferenceroom.jpg"
   ]
 }
