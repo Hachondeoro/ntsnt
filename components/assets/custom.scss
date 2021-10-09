@@ -73,43 +73,43 @@
 .projectPadding {
   @media only screen and (min-width: 3001px) {
     margin-left: 35%;
-    margin-right:35%
+    margin-right: 35%;
   }
   @media only screen and (max-width: 3000px) {
     margin-left: 30%;
-    margin-right:30%
+    margin-right: 30%;
   }
   @media only screen and (max-width: 2600px) {
     margin-left: 27.5%;
-    margin-right:27.5%
+    margin-right: 27.5%;
   }
   @media only screen and (max-width: 2400px) {
     margin-left: 25%;
-    margin-right:25%
+    margin-right: 25%;
   }
   @media only screen and (max-width: 2200px) {
     margin-left: 20%;
-    margin-right:20%
+    margin-right: 20%;
   }
   @media only screen and (max-width: 1900px) {
     margin-left: 15%;
-    margin-right:15%
+    margin-right: 15%;
   }
   @media only screen and (max-width: 1650px) {
     margin-left: 10%;
-    margin-right:10%
+    margin-right: 10%;
   }
   @media only screen and (max-width: 1450px) {
     margin-left: 7%;
-    margin-right:7%
+    margin-right: 7%;
   }
   @media only screen and (max-width: 1350px) {
     margin-left: 5%;
-    margin-right:5%
+    margin-right: 5%;
   }
   @media only screen and (max-width: 1350px) {
     margin-left: 2%;
-    margin-right:2%
+    margin-right: 2%;
   }
 }
 .projectCards {
@@ -197,7 +197,6 @@
   }
 }
 
-
 .container {
   max-width: 800px;
   margin: auto;
@@ -208,16 +207,20 @@
   flex-wrap: wrap;
 }
 
-.ourservices{
-  color:black;
-  img{
-    height:20em;
+.ourservices {
+  color: black;
+  img {
+    height: 20em;
     align-items: right;
   }
 }
 
-.netlify{
+.netlify {
   white-space: pre-wrap;
-  p{
+  li:before {
+    content: "\2605";
+  }
+
+  p {
   }
 }

@@ -16,18 +16,18 @@ export default {
       folder: "public/residential",
       create: true,
       extension: "json",
+      identifier_field: "title",
       fields: [
         { label: "Title", name: "title", widget: "string" },
         {
           label: "Images",
-          name: "images",
-          collapsed: true,
+          name: "image",
           widget: "list",
           summary: "{{fields.image}}",
           field: { label: "Image", name: "image", widget: "image" },
         },
-        { label: "Description", name: "description", widget: "text", required: false },
-        { label: "Project Details", name: "project_details", widget: "markdown", required: false },
+        { label: "Short Description", name: "shortDescription", widget: "text" },
+        { label: "Project Details", name: "projectDetails", widget: "markdown" },
       ],
     },
     {
@@ -38,9 +38,9 @@ export default {
       create: true,
       fields: [
         { label: "Title", name: "title", widget: "string" },
-        { label: "Image", name: "image", widget: "image", required: false },
-        { label: "Description", name: "description", widget: "text", required: false },
-        { label: "Project Details", name: "project_details", widget: "markdown", required: false },
+        { label: "Image", name: "image", widget: "image" },
+        { label: "Description", name: "description", widget: "text" },
+        { label: "Project Details", name: "project_details", widget: "markdown" },
       ],
     },
     {
@@ -131,10 +131,54 @@ export default {
               widget: "list",
               fields: [
                 { label: "Title", name: "title", widget: "string" },
-                { label: "Description", name: "description", widget: "text", required: false },
-                { label: "Image", name: "image", widget: "image", required: false },
+                { label: "Description", name: "description", widget: "text" },
+                { label: "Image", name: "image", widget: "image" },
               ],
             },
+          ],
+        },
+      ],
+    },
+    {
+      label: "Employment",
+      name: "employment",
+      extension: "json",
+      files: [
+        {
+          label: "Introduction",
+          name: "introduction",
+          file: "/public/content/introduction.json",
+          fields: [
+            { name: "introduction", label: "Introduction", widget: "string" },
+            { name: "content", label: "Content", widget: "markdown" },
+          ],
+        },
+        {
+          label: "Features",
+          name: "features",
+          file: "/public/content/features.json",
+          fields: [
+            {
+              label: "Features",
+              name: "features",
+              widget: "list",
+              fields: [
+                { label: "Title", name: "title", widget: "string" },
+                { label: "Description", name: "description", widget: "markdown" },
+                { label: "Image", name: "image", widget: "image" },
+              ],
+            },
+          ],
+        },
+        {
+          label: "Positions",
+          name: "positions",
+          file: "/public/content/positions.json",
+          fields: [
+            { name: "positions", label: "Positions", widget: "string" },
+            { name: "positions_list", label: "Positions list", widget: "markdown" },
+            { name: "requirements", label: "Requirements", widget: "string" },
+            { name: "requirements_list", label: "Requirements list", widget: "markdown" },
           ],
         },
       ],

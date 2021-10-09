@@ -53,7 +53,7 @@ const Projects = ({ data }) => {
   const [modal, setModal] = useState(false);
   const [residential, setResidential] = useState(0);
   const [commercial, setCommercial] = useState(0);
-
+  console.log(data)
   const toggleResidential = (project) => {
     setResidential(project);
     setModal(!modal);
@@ -128,6 +128,7 @@ const Projects = ({ data }) => {
           </div>
         </section>
         <div>
+        
           <Tabs className="reactTabs">
             <TabList className="tab" style={{ color:"black"}}>
               <Tab>COMMERCIAL</Tab>
