@@ -19,6 +19,8 @@ export default {
       identifier_field: "title",
       fields: [
         { label: "Title", name: "title", widget: "string" },
+        { label: "Short Description", name: "shortDescription", widget: "text" },
+        { label: "Project Details", name: "projectDetails", widget: "markdown" },
         {
           label: "Images",
           name: "image",
@@ -26,21 +28,26 @@ export default {
           summary: "{{fields.image}}",
           field: { label: "Image", name: "image", widget: "image" },
         },
-        { label: "Short Description", name: "shortDescription", widget: "text" },
-        { label: "Project Details", name: "projectDetails", widget: "markdown" },
       ],
     },
     {
       label: "Commercial Projects",
       name: "commercialprojects",
       folder: "public/commercial",
-      extension: "json",
       create: true,
+      extension: "json",
+      identifier_field: "title",
       fields: [
         { label: "Title", name: "title", widget: "string" },
-        { label: "Image", name: "image", widget: "image" },
-        { label: "Description", name: "description", widget: "text" },
-        { label: "Project Details", name: "project_details", widget: "markdown" },
+        { label: "Short Description", name: "shortDescription", widget: "text" },
+        { label: "Project Details", name: "projectDetails", widget: "markdown" },
+        {
+          label: "Images",
+          name: "image",
+          widget: "list",
+          summary: "{{fields.image}}",
+          field: { label: "Image", name: "image", widget: "image" },
+        },
       ],
     },
     {

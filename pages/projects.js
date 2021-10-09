@@ -7,53 +7,31 @@ import React, { useState } from "react";
 import ImageGallery from "react-image-gallery";
 import ReactMarkdown from "react-markdown";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
-import {
-  Button,
-  Card,
-  CardTitle,
-  Modal,
-  ModalBody,
-  ModalFooter,
-  ModalHeader,
-  Row,
-} from "reactstrap";
+import { Button, Card, CardTitle, Modal, ModalBody, ModalFooter, ModalHeader, Row } from "reactstrap";
 import Image from "next/image";
 
-const MYQUERY = `query MyQuery {
-  allProjects (first:40){
-    title
-    image {
-      url
-    }
-    shortDescription
-    projectDetails(markdown: false)
-  }
-  allProjectCommercials (first:40){
-    title
-    image {
-      url
-    }
-    shortDescription
-    projectDetails(markdown: false)
-  }
-}
-`;
-
-export async function getStaticProps() {
-  const data = await request({
-    query: MYQUERY,
+const Projects = () => {
+  const contextResidential = require.context("public/residential", true, /.json$/);
+  const residentialProjects = [];
+  contextResidential.keys().forEach((key) => {
+    const fileName = key.replace("./", "");
+    const resource = require(`public/residential/${fileName}`);
+    residentialProjects.push(JSON.parse(JSON.stringify(resource)));
   });
-  return {
-    props: { data },
-    revalidate: 10,
-  };
-}
 
-const Projects = ({ data }) => {
+  const contextCommercial = require.context("public/commercial", true, /.json$/);
+  const commercialProjects = [];
+  contextCommercial.keys().forEach((key) => {
+    const fileName = key.replace("./", "");
+    const resource = require(`public/commercial/${fileName}`);
+    commercialProjects.push(JSON.parse(JSON.stringify(resource)));
+  });
+
+  
   const [modal, setModal] = useState(false);
   const [residential, setResidential] = useState(0);
   const [commercial, setCommercial] = useState(0);
-  console.log(data)
+
   const toggleResidential = (project) => {
     setResidential(project);
     setModal(!modal);
@@ -65,13 +43,13 @@ const Projects = ({ data }) => {
   };
   const toggle = () => setModal(!modal);
 
-  const residentialGallery = data.allProjects[residential].image.map((v) => ({
-    original: v.url,
-    thumbnail: v.url,
+  const residentialGallery = residentialProjects[residential].image.map((image) => ({
+    original: image,
+    thumbnail: image,
   }));
-  const commercialGallery = data.allProjectCommercials[commercial].image.map((v) => ({
-    original: v.url,
-    thumbnail: v.url,
+  const commercialGallery = commercialProjects[commercial].image.map((image) => ({
+    original: image,
+    thumbnail: image,
   }));
 
   return (
@@ -110,7 +88,7 @@ const Projects = ({ data }) => {
           <div className="row m-10-hor">
             <div className="col-md-5">
               <FadeInRegular>
-                <div className="heading" style={{ color:"black"}}>
+                <div className="heading" style={{ color: "black" }}>
                   Perfection in<span className="br"></span> Design
                 </div>
               </FadeInRegular>
@@ -118,35 +96,29 @@ const Projects = ({ data }) => {
 
             <div className="col-md-7">
               <p className="content">
-                Northern Trade Solutions (NTS) is proud of the size and importance of projects we
-                have been involved in since 2010. As a relatively young, but experienced company, we
-                believe these projects are a reflection of our strong position in the building and
-                construction industry and the need for quality building and fit out services in the
-                Territory.
+                Northern Trade Solutions (NTS) is proud of the size and importance of projects we have been involved in
+                since 2010. As a relatively young, but experienced company, we believe these projects are a reflection
+                of our strong position in the building and construction industry and the need for quality building and
+                fit out services in the Territory.
               </p>
             </div>
           </div>
         </section>
         <div>
-        
           <Tabs className="reactTabs">
-            <TabList className="tab" style={{ color:"black"}}>
+            <TabList className="tab" style={{ color: "black" }}>
               <Tab>COMMERCIAL</Tab>
               <Tab>RESIDENTIAL</Tab>
             </TabList>
             <TabPanel>
               <div>
-                {/* The Modal data.allProjects[currentIndex] is a bit messy, but that's it */}
+                {/* The Modal residentialProjects[currentIndex] is a bit messy, but that's it */}
                 <Modal isOpen={modal} toggle={toggle} className="parentCard markdown">
-                  <ModalHeader toggle={toggle}>
-                    {data.allProjectCommercials[commercial].title}
-                  </ModalHeader>
+                  <ModalHeader toggle={toggle}>{commercialProjects[commercial].title}</ModalHeader>
                   <ModalBody>
                     <ImageGallery items={commercialGallery} />
-                    <ReactMarkdown
-                      children={data.allProjectCommercials[commercial].projectDetails}
-                    />
-                    <p>{data.allProjectCommercials[commercial].shortDescription}</p>
+                    <ReactMarkdown children={commercialProjects[commercial].projectDetails} />
+                    <p>{commercialProjects[commercial].shortDescription}</p>
                   </ModalBody>
                   <ModalFooter>
                     <Button color="primary" onClick={toggle}>
@@ -157,21 +129,14 @@ const Projects = ({ data }) => {
               </div>
               <div className="projectCards col-12 mx-auto d-block p-0">
                 <Row className="justify-content-center projectPadding">
-                  {data.allProjectCommercials.map((item, index) => (
+                  {commercialProjects.map((item, index) => (
                     <FadeInImageGrid>
                       <div>
                         <Card>
-                          <Image
-                            height="200px"
-                            width="280px"
-                            src={item.image[0].url}
-                            alt="Card image cap"
-                          />
+                          <Image height="200px" width="280px" src={item.image[0]} alt="Card image cap" />
                           <div className="special-card">
                             <CardTitle tag="h5" className="mb-0 heading-card">
-                              <Button
-                                onClick={() => toggleCommercial(index)}
-                                className="special-button">
+                              <Button onClick={() => toggleCommercial(index)} className="special-button">
                                 {item.title}
                               </Button>
                             </CardTitle>
@@ -185,13 +150,13 @@ const Projects = ({ data }) => {
             </TabPanel>
             <TabPanel>
               <div>
-                {/* The Modal data.allProjects[currentIndex] is a bit messy, but that's it */}
+                {/* The Modal residentialProjects[currentIndex] is a bit messy, but that's it */}
                 <Modal isOpen={modal} toggle={toggle} className="parentCard markdown">
-                  <ModalHeader toggle={toggle}>{data.allProjects[residential].title}</ModalHeader>
+                  <ModalHeader toggle={toggle}>{residentialProjects[residential].title}</ModalHeader>
                   <ModalBody>
                     <ImageGallery items={residentialGallery} />
-                    <ReactMarkdown children={data.allProjects[residential].projectDetails} />
-                    <p>{data.allProjects[residential].shortDescription}</p>
+                    <ReactMarkdown children={residentialProjects[residential].projectDetails} />
+                    <p>{residentialProjects[residential].shortDescription}</p>
                   </ModalBody>
                   <ModalFooter>
                     <Button color="primary" onClick={toggle}>
@@ -202,22 +167,15 @@ const Projects = ({ data }) => {
               </div>
               <div className="projectCards col-12 mx-auto d-block p-0">
                 <Row className="justify-content-center projectPadding">
-                  {data.allProjects.map((item, index) => (
+                  {residentialProjects.map((item, index) => (
                     <FadeInImageGrid>
                       <div>
                         <Card>
-                          <Image
-                            height="200px"
-                            width="280px"
-                            src={item.image[0].url}
-                            alt="Card image cap"
-                          />
+                          <Image height="200px" width="280px" src={item.image[0]} alt="Card image cap" />
 
                           <div className="special-card">
                             <CardTitle tag="h5" className="mb-0 heading-card">
-                              <Button
-                                onClick={() => toggleResidential(index)}
-                                className="special-button">
+                              <Button onClick={() => toggleResidential(index)} className="special-button">
                                 {item.title}
                               </Button>
                             </CardTitle>
