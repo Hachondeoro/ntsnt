@@ -69,6 +69,7 @@ const Header = () => {
     <header id="myHeader" className="navbar">
       <div className="container-fluid">
         <div className="row m-2-hor w-100-nav">
+        
           <div className="logo">
             <div className="navbar-title navbar-item">
               <NavLink href="/">

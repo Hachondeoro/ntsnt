@@ -403,7 +403,7 @@ section{
       .navbar-item {
         position: relative;
         top: 0px;
-        left: 0px;
+        left: -20px;
         padding: 0;
         width: 70px;
         border-bottom: none;
@@ -417,7 +417,7 @@ section{
     }
     @media only screen and (max-width: 1199px) { 
       .m-2-hor {
-          padding: 0px 2%;
+          padding: 0px 0%;
       }
       .menu{
         padding: 15px 0 10px;
