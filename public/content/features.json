@@ -1,0 +1,24 @@
+{
+  "features": [
+    {
+      "title": "CUSTOMER SERVICE",
+      "description": "We are dedicated to the Territory building industry and pride ourselves on a solid reputation for delivering timely and quality services to satisfy our client’s diverse needs. We pride ourselves on our repeat business and long-term client partnerships.",
+      "image": "/images/engineer.png"
+    },
+    {
+      "title": "CONTINUOUS IMPROVEMENT",
+      "description": "We value self improvement and business progression in everything that we do. NTS is proudly driven by a need to continuously improve in our services and our involvement in the community. We know that the more we improve, the more the Northern Territory building and construction industry improves.",
+      "image": "/images/marketing.png"
+    },
+    {
+      "title": "CULTURAL DIVERSITY",
+      "description": "NTS is dedicated to bringing talented, hard working people from diverse backgrounds together. NTS values a culturally diverse workplace and is actively involved in Indigenous communities with a vibrant Indigenous employment program.",
+      "image": "/images/linked-symbol.png"
+    },
+    {
+      "title": "TEAM WORK",
+      "description": "We believe in a satisfied and empowered workforce. NTS is focused on the wellbeing and happiness of our employees and put a strong focus on team work and a positive work environment for our staff.",
+      "image": "/images/users-group.png"
+    }
+  ]
+}
