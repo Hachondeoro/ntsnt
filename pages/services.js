@@ -2,10 +2,9 @@ import Footer from "@components/footer";
 import Layout from "@components/layout";
 import Link from "next/link";
 import React from "react";
-import myData from "public/ourservices.json";
+import ourservices from "public/content/ourservices.json";
 
 const Services = () => {
-  console.log(myData);
   return (
     <Layout
       pageTitle="Northern Trade Solutions"
@@ -44,7 +43,7 @@ const Services = () => {
           <div className="col-12 col-md-9 mx-auto d-block">
             <div className="row">
               <hr className="w-100 my-0" style={{ backgroundColor: "#565555", height: 5 }} />
-              {myData.services.map((item) => (
+              {ourservices.services.map((item) => (
                 <>
                   <div className="col-md-6 centered p-5 pb-5" key={item.title}>
                     <div className="p-md-5">

@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+html,
+body {
+  color: #444;
+  font-size: 14px;
+  font-family: "Poppins", 'Segoe UI', 'Ubuntu','Droid Sans', sans-serif;
+
+}
+
+body {
+  padding: 20px;
+  color:rgb(76, 76, 76)
+}
+
+img{
+  width:20em;
+  display: inline-block;
+
+}
+
+/* h1{
+  font-variant-caps: all-small-caps;
+  font-weight: 800;
+} */

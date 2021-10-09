@@ -3,6 +3,7 @@ import Link from "next/link";
 import Testimony from "@components/carouseltestimony";
 import Footer from "@components/footer";
 import Layout from "@components/layout";
+import aboutus from "public/content/aboutus.json"
 
 const About = () => (
   <Layout
@@ -39,41 +40,13 @@ const About = () => (
         </div>
       </section>
       <section className="col-12 col-md-9 mx-auto d-block">
-        <img src="/images/aboutus.jpg" width="100%"/>
+        <img src={aboutus.image} width="100%"/>
       </section>
       <section className="container-fluid black_more pt-0">
         <div className="row m-10-hor">
           <div className="col-md-10 mx-auto">
-            <p className="content">
-              Northern Trade Solutions (NTS) has been providing the Northern
-              Territory building industry with a comprehensive range of building
-              and fit out services since 2010. These services include, but are
-              not limited to, partition and ceiling installation, metal
-              fabrication, carpentry and joinery, glazing, external facade
-              services, demolition and asbestos removal.
-            </p>
-            <p className="content">
-              NTS is committed to constant improvement and maintaining a
-              positive reputation in the Territory building and construction
-              industry. We pride ourselves on high-quality workmanship and
-              professional services and employ staff from a range of trade
-              backgrounds with various building industry affiliations to support
-              the diverse needs of our industry.
-            </p>
-            <p className="content">
-              Over the years we have developed strong working relationships with
-              a number of principal contractors and specialised sub-contractors
-              and these assist in the completion of specific works not included
-              in the NTS trade list. This enables us to provide a complete
-              service to clients without the inconvenience of multiple trade
-              accounts.
-            </p>
-            <p className="content">
-              We are proudly accredited members of the Master Builders
-              Association (MBA) of the Northern Territory. NTS Project Managers
-              have their Test and Tag Accreditation. One of our Executive
-              Directors holds a Certificate IV in Building and can act as a
-              consultant in various building and construction situations.
+            <p className="netlify">
+             {aboutus.content}
             </p>
           </div>
         </div>

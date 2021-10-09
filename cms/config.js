@@ -18,7 +18,14 @@ export default {
       extension: "json",
       fields: [
         { label: "Title", name: "title", widget: "string" },
-        { label: "Images", name: "images", widget: "list", summary: '{{fields.image}}', field: { label: "Image", name: "image", widget: "image" } },
+        {
+          label: "Images",
+          name: "images",
+          collapsed: true,
+          widget: "list",
+          summary: "{{fields.image}}",
+          field: { label: "Image", name: "image", widget: "image" },
+        },
         { label: "Description", name: "description", widget: "text", required: false },
         { label: "Project Details", name: "project_details", widget: "markdown", required: false },
       ],
@@ -37,6 +44,62 @@ export default {
       ],
     },
     {
+      label: "Home",
+      name: "home",
+      extension: "json",
+      files: [
+        {
+          label: "Background Images",
+          name: "backgrounds",
+          file: "/public/content/backgrounds.json",
+          fields: [
+            {
+              label: "Images",
+              name: "images",
+              widget: "list",
+              summary: "{{fields.image}}",
+              field: { label: "Image", name: "image", widget: "image" },
+            },
+          ],
+        },
+        {
+          label: "Description one",
+          name: "descriptionone",
+          file: "/public/content/descriptionone.json",
+          fields: [
+            { name: "title", label: "Title", widget: "string" },
+            { name: "content", label: "Content", widget: "markdown" },
+          ],
+        },
+        {
+          label: "Description two",
+          name: "descriptiontwo",
+          file: "/public/content/descriptiontwo.json",
+          fields: [
+            { name: "title", label: "Title", widget: "string" },
+            { name: "content", label: "Content", widget: "markdown" },
+          ],
+        },
+        {
+          label: "Awards",
+          name: "awards",
+          file: "/public/content/awards.json",
+          fields: [
+            {
+              label: "Images",
+              name: "images",
+              widget: "list",
+              summary: "{{fields.image}}",
+              fields: [
+                { name: "title", label: "Title", widget: "string" },
+                { label: "Image", name: "image", widget: "image" },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    {
       label: "About Us",
       name: "aboutus",
       extension: "json",
@@ -44,8 +107,11 @@ export default {
         {
           label: "About Us",
           name: "aboutus",
-          file: "/public/aboutus.json",
-          fields: [{ name: "title", label: "Title", widget: "markdown" }],
+          file: "/public/content/aboutus.json",
+          fields: [
+            { name: "image", label: "Image", widget: "image" },
+            { name: "content", label: "Content", widget: "markdown" },
+          ],
         },
       ],
     },
@@ -57,7 +123,7 @@ export default {
         {
           label: "Our Services",
           name: "ourservices",
-          file: "/public/ourservices.json",
+          file: "/public/content/ourservices.json",
           fields: [
             {
               label: "Services",
@@ -69,6 +135,24 @@ export default {
                 { label: "Image", name: "image", widget: "image", required: false },
               ],
             },
+          ],
+        },
+      ],
+    },
+    {
+      label: "Contact",
+      name: "contact",
+      extension: "json",
+      files: [
+        {
+          label: "Contact Information",
+          name: "contact",
+          file: "/public/content/contact.json",
+          fields: [
+            { label: "Address", name: "address", widget: "string" },
+            { label: "Postal Address", name: "postaladdress", widget: "string" },
+            { label: "Phone", name: "phone", widget: "string" },
+            { label: "Email", name: "email", widget: "string" },
           ],
         },
       ],
