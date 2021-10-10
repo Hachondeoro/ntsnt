@@ -1,0 +1,83 @@
+backend:
+  name: github
+  branch: master
+  repo: "Hachondeoro/ntsnt"
+
+media_folder: public/images
+public_folder: /images
+publish_mode: editorial_workflow
+logo_url: https://www.ntsnt.com.au/images/ntsnt%20logo.png
+
+collections:
+  - label: "Residential Projects"
+    name: "residential_projects"
+    folder: "data/commercial"
+    create: true
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Image, name: image, widget: image, required: false }
+      - { label: Description, name: description, widget: text, required: false }
+      - { label: Project Details, name: project_details, widget: markdown, required: false }
+  - label: "Commercial Projects"
+    name: "commercial_projects"
+    folder: "data"
+    create: true
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Image, name: image, widget: image, required: false }
+      - { label: Description, name: description, widget: text, required: false }
+      - { label: Project Details, name: project_details, widget: markdown, required: false }
+
+  - name: "aboutus"
+    label: "About Us"
+    extension: "json"
+    files:
+      - file: "public/aboutus.json"
+        label: "About Us"
+        name: "aboutus"
+        fields:
+          - { name: title, label: Title, widget: markdown }
+  - name: "ourservices"
+    label: "Our Services"
+    extension: "json"
+    files:
+      - file: "public/ourservices.json"
+        label: "Our Services"
+        name: "ourservices"
+        fields:
+          - name: services
+            label: Services
+            widget: list
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: description, widget: text, required: false }
+              - { label: Image, name: image, widget: image, required: false }
+
+  - name: "navigation"
+    label: "Navigation"
+    files:
+      - label: "About Page"
+        name: "about"
+        file: "site/content/about.yml"
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Intro, name: intro, widget: markdown }
+          - label: Team
+            name: team
+            widget: list
+            fields:
+              - { label: Name, name: name, widget: string }
+              - { label: Position, name: position, widget: string }
+              - { label: Photo, name: photo, widget: image }
+      - label: "Locations Page"
+        name: "locations"
+        file: "site/content/locations.yml"
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Intro, name: intro, widget: markdown }
+          - label: Locations
+            name: locations
+            widget: list
+            fields:
+              - { label: Name, name: name, widget: string }
+              - { label: Address, name: address, widget: string }
