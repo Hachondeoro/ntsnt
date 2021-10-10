@@ -3,7 +3,7 @@ const withImages = require("next-images");
 
 const nextConfig = {
   images: {
-    domains: ["datocms-assets.com", "https://www.datocms-assets.com", "www.datocms-assets.com"],
+    domains: ["datocms-assets.com", "ntsnt.com.au","ntsnt.netlify.app"],
   },
   webpack: (cfg) => {
     cfg.module.rules.push({

@@ -16,6 +16,7 @@ class MyDocument extends Document {
 					<meta property="og:type" content="website" />
 					<link rel="icon" href="/favicon.ico" />
 					<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+					<script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 					{/* <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script> */}
 					{/* <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script> */}
 				</Head>
