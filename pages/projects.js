@@ -170,7 +170,7 @@ const Projects = () => {
                     <FadeInImageGrid>
                       <div>
                         <Card>
-                          <ImageData height="200px" width="280px" src={item.image[0]} alt="Card image cap" />
+                          <img height="200px" width="280px" src={item.image[0]} alt="Card image cap" />
 
                           <div className="special-card">
                             <CardTitle tag="h5" className="mb-0 heading-card">
