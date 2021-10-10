@@ -8,7 +8,6 @@ import ImageGallery from "react-image-gallery";
 import ReactMarkdown from "react-markdown";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import { Button, Card, CardTitle, Modal, ModalBody, ModalFooter, ModalHeader, Row } from "reactstrap";
-import Image from "next/image";
 
 const Projects = () => {
   const contextResidential = require.context("public/residential", true, /.json$/);
@@ -133,7 +132,7 @@ const Projects = () => {
                     <FadeInImageGrid>
                       <div>
                         <Card>
-                          <Image height="200px" width="280px" src={item.image[0]} alt="Card image cap" />
+                          <img height="200px" width="280px" src={item.image[0]} alt="Card image cap" />
                           <div className="special-card">
                             <CardTitle tag="h5" className="mb-0 heading-card">
                               <Button onClick={() => toggleCommercial(index)} className="special-button">
@@ -171,7 +170,7 @@ const Projects = () => {
                     <FadeInImageGrid>
                       <div>
                         <Card>
-                          <Image height="200px" width="280px" src={item.image[0]} alt="Card image cap" />
+                          <ImageData height="200px" width="280px" src={item.image[0]} alt="Card image cap" />
 
                           <div className="special-card">
                             <CardTitle tag="h5" className="mb-0 heading-card">
