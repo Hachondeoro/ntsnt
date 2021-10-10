@@ -20,9 +20,10 @@ const AdminPage = () => {
   }, []);
   return (
     <div>
-      <CMS />;
+      <CMS />
     </div>
   );
 };
 
 export default AdminPage;
+
