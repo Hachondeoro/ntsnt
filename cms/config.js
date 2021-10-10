@@ -3,7 +3,7 @@ export default {
   backend: {
     name: "git-gateway",
     repo: "Hachondeoro/ntsnt",
-    branch: "master",
+    branch: "netlifycms",
   },
   media_folder: "/public/images",
   public_folder: "/images",
