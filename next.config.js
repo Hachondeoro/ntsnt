@@ -13,6 +13,7 @@ const nextConfig = {
     });
     return cfg;
   },
+  target: 'serverless'
 };
 
 module.exports = withPlugins([[withImages]], nextConfig);
