@@ -41,21 +41,21 @@ const Services = () => {
           <h1 style={{ textAlign: "center" }}>OUR SERVICES</h1>
           <br></br>
           <div className="col-12 col-md-9 mx-auto d-block">
-            <div className="row">
+            <div className="">
               <hr className="w-100 my-0" style={{ backgroundColor: "#565555", height: 5 }} />
               {ourservices.services.map((item) => (
-                <>
+                <div className="row">
                   <div className="col-md-6 centered p-5 pb-5" key={item.title}>
-                    <div className="p-md-5">
+                    <div className="col-12 p-md-5">
                       <div className="heading">{item.title}</div>
                       <p className="mt-3">{item.description}</p>
                     </div>
-                    <div className="col-md-6 pl-md-0">
-                      <img src={item.image} alt="#" />
-                    </div>
+                  </div>
+                  <div className="col-12 col-md-6 pl-md-0">
+                    <img src={item.image} alt="#" width="100%" />
                   </div>
                   <hr className="w-100 my-0" style={{ backgroundColor: "#fff", height: 10 }} />
-                </>
+                </div>
               ))}
             </div>
           </div>
