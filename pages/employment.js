@@ -73,7 +73,7 @@ const Employment = () => {
               <div className="m-4">
                 Written applications, including an up-to-date resume and related accreditations and tickets should be
                 emailed to
-                <a href="mailto:jessie@ntsnt.com.au">jessie@ntsnt.com.au</a>
+                <a href="mailto:hr.admin@ntsnt.com.au"> hr.admin@ntsnt.com.au</a>
               </div>
             </div>
           </section>
